@@ -1,7 +1,9 @@
 <template>
-    <div class="retentionDemo">
+    <div class="retentionDemo" style="display: flex; align-items: center; height:100vh;">
         <div style="width: 300px; position: relative; margin: 0px auto;">
+            <!-- 最底下红色背景 绝对定位 -->
             <div class="bg1"></div>
+            <!-- 内容 -->
             <div class="main_content">
                 <span class="remaining_places">剩余名额：1人</span>
                 <ul style="margin-top: 22px; display: flex; align-items: center; justify-content: center;" >
@@ -19,14 +21,16 @@
                         <span style="color: #FF7800; font-size: 13px; color: #FF7800; margin-left: 5px; ">开源战役开源</span>
                     </div>
                     <div style="background-color: white; border-radius: 5px; margin: 10px 11px 0px 11px; padding: 10px 18px 30px 18px;">
-                        <span style="color: #300000; font-size: 14px;">打开开源战役注册后将商品加入购物车并体验40秒</span>
+                        <span style="color: #300000; font-size: 14px;">打开开源战役注册后将商品加入购物车并体验40秒,打开开源战役注册后将商品加入购物车并体验40秒,打开开源战役注册后将商品加入购物车并体验40秒</span>
                     </div>
                 </div>
                 <div class="how_get_reward"><span style="margin: 0px auto; text-align: center;">如何领奖</span></div>
             </div>
-            <div style="height: 88px;"></div>
-            <img src="../img/xlx_voice_multiple_reward_reserved_bottom.png" style="position: absolute; width: inherit; left: 0px; bottom: 8px;"/>
-            <span class="download_button">飞速下载中…（65%）</span>
+            <!-- 为了把父元素撑开 -->
+            <!-- <div style="height: 88px;"></div> -->
+            <div class="download_box">
+                <span class="download_button">飞速下载中…（65%）</span>
+            </div>
         </div>
         
     </div>
@@ -55,9 +59,9 @@ export default {
         border-top-left-radius: 94px; 
         border-radius: 47px 47px 15px 15px; 
         width: inherit; 
-        height: 300px; 
+        /* height: 300px;  */
         position: absolute; 
-        /* top: 50px;  */
+        top: 50px; 
         left: 0px; 
         bottom: 0px;
         /* white-space: nowrap; */
@@ -129,6 +133,17 @@ export default {
         flex-basis: 40px;
         background-color: aquamarine;
     }
+
+    .download_box {
+        background: url("../img/xlx_voice_multiple_reward_reserved_bottom.png") no-repeat;
+        background-size: 300px 118px;
+        width: inherit; 
+        height: 118px;
+        left: 0px; 
+        bottom: 8px; 
+        margin-top: -30px; 
+        position: relative;
+    }
     
     .download_button {
         font-size: 16px; 
@@ -139,9 +154,9 @@ export default {
         text-align: center; 
         background: url('../img/bg_button_progress.png') no-repeat; 
         background-size: 220px;
-        position: absolute; 
         text-align: center;
-        bottom: 24px; 
+        bottom: 16px; 
+        position: absolute; 
         left: 50%;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
