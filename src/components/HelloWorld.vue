@@ -37,6 +37,55 @@ export default {
     msg: String
   }
 }
+function Person() {
+  this.name = "1";
+}
+Person.prototype.sayName = function() {
+    console.log(this.name);
+};
+function Student() {
+  Person.call(this);
+  this.age = 3;
+}
+function beget(obj) {
+  var FN = function() {};
+  FN.prototype = obj;
+  return new FN();
+}
+var proto = beget(Person.prototype);
+// proto.constructor = Student;
+Student.prototype = proto;
+// Student.prototype = Person.prototype;
+
+let person1 = new Student();
+person1.name = "周"
+person1.sayName();
+let person2 = new Student();
+person2.age = 3;
+console.log(person2.age);
+person2.sayName();
+console.log(person2.sayName == person1.sayName);
+console.log(person1.__proto__ === Student.prototype);
+
+function User() {
+  console.log("User constructor");
+  return 1;
+}
+var user = new User();
+console.log(user);
+console.log(User());
+
+
+console.log(run1);
+var run1 = function() {
+  
+}
+
+console.log(run2);
+function run2() {
+
+}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
