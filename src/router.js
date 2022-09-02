@@ -24,6 +24,11 @@ const router = new Router({
             path: '/displayDemo',
             name: 'displayDemo',
             component: () => import('./components/DisplayDemo.vue')
+        },
+        {
+            path: '/childDiffTypeOfDemo',
+            name: 'childDiffTypeOfDemo',
+            component: () => import('./components/ChildDiffTypeOfDemo.vue')
         }
     ]
 });

@@ -12,6 +12,12 @@ export default {
 </script>
 
 <style>
+/* @media screen and (min-width: 750px) {
+    html {
+        font-size: 75px !important;
+    }
+} */
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
