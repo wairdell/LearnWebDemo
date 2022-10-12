@@ -8,28 +8,38 @@ const router = new Router({
         {
             path: '/',
             name: 'navPage',
-            component: () => import('./components/NavPage.vue')
+            component: () => import('./page/NavPage.vue')
         },
         {
             path: '/helloWorld/:msg',
             name: 'helloWorld',
-            component: () => import('./components/HelloWorld.vue')
+            component: () => import('./page/HelloWorld.vue')
         },
         {
             path: '/retentionDemo',
             name: 'retentionDemo',
-            component: () => import('./components/RetentionDemo.vue')
+            component: () => import('./page/RetentionDemo.vue')
         },
         {
             path: '/displayDemo',
             name: 'displayDemo',
-            component: () => import('./components/DisplayDemo.vue')
+            component: () => import('./page/DisplayDemo.vue')
         },
         {
             path: '/childDiffTypeOfDemo',
             name: 'childDiffTypeOfDemo',
-            component: () => import('./components/ChildDiffTypeOfDemo.vue')
-        }
+            component: () => import('./page/ChildDiffTypeOfDemo.vue')
+        },
+        {
+            path: '/interactDemo',
+            name: 'interactDemo',
+            component: () => import('./page/InteractDemo.vue')
+        },
+        {
+            path: '/interactEnterDemo',
+            name: 'interactEnterDemo',
+            component: () => import('./page/InteractEnterDemo.vue')
+        },
     ]
 });
 
